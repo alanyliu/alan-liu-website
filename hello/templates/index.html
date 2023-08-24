@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="wrapper">
+    <div class="container img-container">
+        <a href="/" class="self-portrait">
+            <img src="{% static 'self-portrait.png'%}">
+        </a>
+    </div>
+
+    <div class="container text-container">
+        <div id="about">
+            <h1 class="section-header"> About</h1>
+            <p class="section-text">I am a junior undergraduate student at 
+                <a class="body-hyperlink" href="https://www.rice.edu">Rice University</a> pursuing a B.S. in computer science with a minor
+                in statistics. My academic interests revolve around data science, machine learning, and web/app development. I have been
+                fortunate to have the opportunity to work with the <a class="body-hyperlink" href="https://www.fs.usda.gov/r5">USFS</a> and 
+                <a class="body-hyperlink" href="https://www.sjsu.edu/wildfire/">SJSU WIRC</a> (with a special thanks to Mao Ye from the 
+                UT Austin Statistical Learning & AI Group!) to utilize SGD with momentum to build models for the prediction of wildfire 
+                ignition point and final size in California, as well as 
+                <a class="body-hyperlink" href="https://clinchoice.com/">ClinChoice, Inc.</a> as a data science intern to develop an automation
+                tool for the generation of clinical study reports including TLFs (tables, listings, figures).
+            </p>
+            <p class="section-text">In my spare time, I enjoy playing basketball, playing chess, working out, playing the piano, gaming, and
+                hanging out with friends. I am also an avid traveler always looking forward to exploring new locations and cultures around
+                the world.
+            </p>
+        </div>
+
+        <div id="education">
+            <h1 class="section-header"> Education</h1>
+            <div class="section-text spaced-text"> 
+                <table class="education-table">
+                    <colgroup>
+                        <col span="1" style="width: 25%;">
+                        <col span="1" style="width: 75%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>2021-2025</td>
+                            <td class="education-field">Rice University</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>B.S. Computer Science, Statistics Minor</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="work">
+            <h1 class="section-header"> Work</h1>
+            <div class="section-text">
+                <p class="work-location"> ClinChoice, Inc. <span class="work-time">(May 2023 - Aug 2023)</span></p>
+                <p class="job-description"> Data Science Intern</p>
+                <p class="work-location"> Rice University CS Department <span class="work-time">(Jan 2023 - May 2023)</span></p>
+                <p class="job-description"> COMP 182 TA</p>
+                <p class="work-location"> Rice University CS Department <span class="work-time">(Aug 2022 - Dec 2022)</span></p>
+                <p class="job-description"> COMP 140 TA</p>
+                <p class="work-location"> US Forest Service / SJSU WIRC <span class="work-time">(Dec 2020 - May 2021)</span></p>
+                <p class="job-description"> Machine Learning Intern</p>
+            </div>
+        </div>
+
+        <div id="interests">
+            <h1 class="section-header"> Interests</h1>
+            <div class="section-text">
+                <h2 class="interests-header"> Chess</h2>
+                    <p> Since 2018, I have been playing online chess, and recently, in 2022, I began playing in USCF tournaments. I
+                        personally enjoy working through daily tactics and the puzzle rush mode to work on sharper middlegame and
+                        endgame play, and one of the main reasons I have devoted much of my time to chess is to have fun with friends,
+                        given the growing chess community. As of August 2023, I have played over 20,000 bullet games, nearly 5,000 blitz 
+                        games, and 128 rapid games on chess.com with ratings of 2000+ for each. As for USCF rating, we'll make it up there
+                        one day. :)
+                    </p>
+                <h2 class="interests-header"> Music</h2>
+                    <p> Whenever I have the chance while working out or if I am looking to get in the "zone" while working, I turn to
+                        my favorite outlet for those moments, music. I am enthusiastic about various genres of music, including but not
+                        limited to hip-hop, rap, electronic, and pop rock. Some of my go-to artists include Post Malone, Imagine Dragons,
+                        Metro Boomin, Juice WRLD, 24kGoldn, TheFatRat, and Kane Brown.
+                    </p>
+            </div>
+        </div>
+
+        <div id="contact">
+            <h1 class="section-header"> Contact</h1>
+            <div class="section-text">
+                <p> <em>Email</em>: ayl8@rice.edu</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.addEventListener("hashchange", function () {
+        window.scrollTo(window.scrollX, window.scrollY - 220);
+    });
+</script>
+
+{% endblock %}
